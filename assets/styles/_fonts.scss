@@ -1,89 +1,72 @@
-/* font-family: "RobotoCondensedRegular"; */
+/* font-family: "MyriadProRegular"; */
 @font-face {
-	font-family: "RobotoCondensedRegular";
-	src: url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.eot");
-	src: url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"),
-	url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+	font-family: "MyriadProRegular";
+	src: url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot");
+	src: url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+	url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
-/* font-family: "RobotoCondensedLight"; */
+/* font-family: "MyriadProBold"; */
 @font-face {
-	font-family: "RobotoCondensedLight";
-	src: url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.eot");
-	src: url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.woff") format("woff"),
-	url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.ttf") format("truetype");
+	font-family: "MyriadProBold";
+	src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot");
+	src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.woff") format("woff"),
+	url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
-/* font-family: "RobotoCondensedBold"; */
+/* font-family: "MyriadProItalic"; */
 @font-face {
-	font-family: "RobotoCondensedBold";
-	src: url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.eot");
-	src: url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.woff") format("woff"),
-	url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.ttf") format("truetype");
+	font-family: "MyriadProItalic";
+	src: url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.eot");
+	src: url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.woff") format("woff"),
+	url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
-
-/*********************************************************/
-
-/* font-family: "RobotoBoldCondensed"; */
+/* font-family: "MyriadProSemiBold"; */
 @font-face {
-	font-family: 'RobotoBoldCondensed';
-	src: url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.eot');
-	src: url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.woff2') format('woff2'),
-		 url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.woff') format('woff'),
-		 url('../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.ttf') format('truetype');
-	font-weight: normal;
+	font-family: "MyriadProSemiBold";
+	src: url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.eot");
+	src: url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"),
+	url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
 	font-style: normal;
-
+	font-weight: normal;
 }
-
-/******************************************************/
-
-/* font-family: "HelveticaNeueCyrBold"; */
+/* font-family: "MyriadProBoldItalic"; */
 @font-face {
-	font-family: 'HelveticaNeueCyrBold';
-	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.eot');
-	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff2') format('woff2'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff') format('woff'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.ttf') format('truetype');
-	font-weight: normal;
+	font-family: "MyriadProBoldItalic";
+	src: url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.eot");
+	src: url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.woff") format("woff"),
+	url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.ttf") format("truetype");
 	font-style: normal;
+	font-weight: normal;
 }
-
-/* font-family: "HelveticaNeueCyrLight"; */
+/* font-family: "MyriadProSemiBoldItalic"; */
 @font-face {
-	font-family: 'HelveticaNeueCyrLight';
-	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.eot');
-	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff2') format('woff2'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff') format('woff'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.ttf') format('truetype');
-	font-weight: normal;
+	font-family: "MyriadProSemiBoldItalic";
+	src: url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot");
+	src: url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff") format("woff"),
+	url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf") format("truetype");
 	font-style: normal;
-}
-
-/* font-family: "HelveticaNeueCyrRoman"; */
-@font-face {
-	font-family: 'HelveticaNeueCyrRoman';
-	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.eot');
-	src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff2') format('woff2'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff') format('woff'),
-		 url('../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.ttf') format('truetype');
 	font-weight: normal;
-	font-style: normal;
 }
 
 /* fonts mixins */
-
+@mixin MyriadProBold {
+	font-family: "MyriadProBold", MyriadProBold, sans-serif;
+}
+@mixin MyriadProRegular {
+	font-family: "MyriadProRegular", MyriadProRegular, sans-serif;
+}
+/*
 @mixin RobotoCondensedRegular {
 	font-family: "RobotoCondensedRegular", RobotoCondensedRegular, sans-serif;
 }
@@ -111,3 +94,4 @@
 @mixin HelveticaNeueCyrRoman {
 	font-family: "HelveticaNeueCyrRoman", HelveticaNeueCyrRoman, sans-serif;
 }
+*/

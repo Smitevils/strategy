@@ -30,11 +30,40 @@
 	<!-- /favicon -->
 </head>
 <body>
-
+	<!-- navigation -->
+	<nav>
+		<ul id="myMenu">
+			<li id="to-section-1" data-menuanchor="Page-1" class="anchor-1">
+				<a href="#Page-2"><span data-content="01">главная</span></a>
+			</li>
+			<li id="to-section-2" data-menuanchor="Page-2" class="anchor-2">
+				<a href="#Page-4"><span data-content="02">преимущества</span></a>
+			</li>
+			<li id="to-section-3" data-menuanchor="Page-3" class="anchor-3">
+				<a href="#Page-7"><span data-content="03">стратегии</span></a>
+			</li>
+			<li id="to-section-5" data-menuanchor="Page-5" class="anchor-5">
+				<a href="#Page-10"><span data-content="04">о компании</span></a>
+			</li>
+		</ul>
+		<!-- Блок ссылок на документы -->
+		<ul class="documents-links">
+			<li>
+				<a href="#" target="_blank">Правила и Условия</a>
+			</li>
+			<li>
+				<a href="#" target="_blank">Политика Конфиденциальности</a>
+			</li>
+		</ul>
+		<!-- /Блок ссылок на документы -->
+	</nav>
+	<!-- /navigation -->
 	<div id="fullpage">
 		<div class="section section-bg-1">
 			<div class="table-block">
-				<div class="table-cell-block">dsgsdg</div>
+				<div class="table-cell-block">
+					
+				</div>
 			</div>
 		</div>
 		<div class="section section-bg-2">2</div>

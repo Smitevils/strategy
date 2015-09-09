@@ -2525,58 +2525,78 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
-/* font-family: "RobotoCondensedRegular"; */
+/* font-family: "MyriadProRegular"; */
 @font-face {
-  font-family: "RobotoCondensedRegular";
-  src: url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.eot");
-  src: url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"), url("../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-/* font-family: "RobotoCondensedLight"; */
+/* font-family: "MyriadProBold"; */
 @font-face {
-  font-family: "RobotoCondensedLight";
-  src: url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.eot");
-  src: url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.woff") format("woff"), url("../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight.ttf") format("truetype");
+  font-family: "MyriadProBold";
+  src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot");
+  src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.woff") format("woff"), url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-/* font-family: "RobotoCondensedBold"; */
+/* font-family: "MyriadProItalic"; */
 @font-face {
-  font-family: "RobotoCondensedBold";
-  src: url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.eot");
-  src: url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.woff") format("woff"), url("../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold.ttf") format("truetype");
+  font-family: "MyriadProItalic";
+  src: url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.eot");
+  src: url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.woff") format("woff"), url("../fonts/MyriadPro/MyriadProItalic/MyriadProItalic.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-/*********************************************************/
-/* font-family: "RobotoBoldCondensed"; */
+/* font-family: "MyriadProSemiBold"; */
 @font-face {
-  font-family: 'RobotoBoldCondensed';
-  src: url("../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.eot");
-  src: url("../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.woff2") format("woff2"), url("../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.woff") format("woff"), url("../fonts/Roboto/RobotoBoldCondensed/RobotoBoldCondensed.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-/******************************************************/
-/* font-family: "HelveticaNeueCyrBold"; */
+  font-family: "MyriadProSemiBold";
+  src: url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.eot");
+  src: url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"), url("../fonts/MyriadPro/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* font-family: "MyriadProBoldItalic"; */
 @font-face {
-  font-family: 'HelveticaNeueCyrBold';
-  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.eot");
-  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff") format("woff"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold/HelveticaNeueCyrBold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-/* font-family: "HelveticaNeueCyrLight"; */
+  font-family: "MyriadProBoldItalic";
+  src: url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.eot");
+  src: url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.woff") format("woff"), url("../fonts/MyriadPro/MyriadProBoldItalic/MyriadProBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+/* font-family: "MyriadProSemiBoldItalic"; */
 @font-face {
-  font-family: 'HelveticaNeueCyrLight';
-  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.eot");
-  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff") format("woff"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrLight/HelveticaNeueCyrLight.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-/* font-family: "HelveticaNeueCyrRoman"; */
-@font-face {
-  font-family: 'HelveticaNeueCyrRoman';
-  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.eot");
-  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff") format("woff"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "MyriadProSemiBoldItalic";
+  src: url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot");
+  src: url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff") format("woff"), url("../fonts/MyriadPro/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 /* fonts mixins */
+/*
+@mixin RobotoCondensedRegular {
+	font-family: "RobotoCondensedRegular", RobotoCondensedRegular, sans-serif;
+}
+
+@mixin RobotoCondensedLight {
+	font-family: "RobotoCondensedLight", RobotoCondensedLight, sans-serif;
+}
+
+@mixin RobotoCondensedBold {
+	font-family: "RobotoCondensedBold", RobotoCondensedBold, sans-serif;
+}
+
+@mixin RobotoBoldCondensed {
+	font-family: "RobotoBoldCondensed", RobotoBoldCondensed, sans-serif;
+}
+
+@mixin HelveticaNeueCyrBold {
+	font-family: "HelveticaNeueCyrBold", HelveticaNeueCyrBold, sans-serif;
+}
+
+@mixin HelveticaNeueCyrLight {
+	font-family: "HelveticaNeueCyrLight", HelveticaNeueCyrLight, sans-serif;
+}
+
+@mixin HelveticaNeueCyrRoman {
+	font-family: "HelveticaNeueCyrRoman", HelveticaNeueCyrRoman, sans-serif;
+}
+*/
 html, body {
   width: 100%;
   height: 100%;
@@ -2641,219 +2661,81 @@ ol, ul {
   text-align: center;
   vertical-align: middle; }
 
-/*********************** menu ***********************/
-/********************** /menu ***********************/
+/****** first slide ******/
+/*** navigation ***/
+nav {
+  position: fixed;
+  z-index: 100;
+  display: block;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  nav ul#myMenu {
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+    nav ul#myMenu li {
+      display: inline-block;
+      margin-right: 44px; }
+      nav ul#myMenu li:last-child {
+        margin-right: 0; }
+      nav ul#myMenu li a {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        text-decoration: none;
+        line-height: 76px;
+        color: #fff;
+        letter-spacing: 2px;
+        font-family: "MyriadProRegular", MyriadProRegular, sans-serif; }
+        nav ul#myMenu li a span {
+          position: relative;
+          display: inline-block; }
+        nav ul#myMenu li a span:after {
+          content: attr(data-content);
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-top: -10px;
+          margin-right: -16px;
+          font-size: 12px; }
+    nav ul#myMenu:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.3); }
+
+/** documents links **/
+ul.documents-links {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  margin-top: 33px; }
+  ul.documents-links li {
+    display: inline-block;
+    margin-right: 38px; }
+    ul.documents-links li a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #f0eff0;
+      opacity: 0.6;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      ul.documents-links li a:hover {
+        opacity: 1; }
+
+/** /documents links **/
+/*** /navigation ***/
+/****** first slide ******/
 /****************************************************/
-@media screen and (max-width: 1400px) {
-  .section-text {
-    top: 120px;
-    width: 440px; }
-
-  h1.section-text__title {
-    font-size: 60px;
-    font-weight: normal; }
-
-  p.section-text__text {
-    font-size: 20px; }
-
-  /**/
-  nav {
-    margin-top: -140px; }
-
-  nav ul li {
-    height: 70px; }
-
-  nav ul li.characteristics {
-    background-size: 70px 70px; }
-    nav ul li.characteristics:hover {
-      background-size: 70px 70px; }
-    nav ul li.characteristics.active {
-      background-size: 70px 70px; }
-
-  nav ul li.technical {
-    background-size: 70px 70px; }
-    nav ul li.technical:hover {
-      background-size: 70px 70px; }
-    nav ul li.technical.active {
-      background-size: 70px 70px; }
-
-  nav ul li.photos {
-    background-size: 70px 70px; }
-    nav ul li.photos:hover {
-      background-size: 70px 70px; }
-    nav ul li.photos.active {
-      background-size: 70px 70px; }
-
-  nav ul li.order {
-    background-size: 70px 70px; }
-    nav ul li.order:hover {
-      background-size: 70px 70px; }
-    nav ul li.order.active {
-      background-size: 70px 70px; }
-
-  nav ul li a {
-    line-height: 70px;
-    padding-left: 65px; }
-
-  /**************************/
-  .galery {
-    display: none; }
-
-  /************************/
-  .order-contacts-block {
-    bottom: 100px;
-    height: 400px;
-    width: 90%; }
-
-  textarea {
-    display: none; }
-
-  .order-contacts-block .order-block h1 {
-    font-size: 32px;
-    margin: 0; }
-
-  .order-contacts-block .order-block h4 {
-    margin: 10px 0; }
-
-  /************************/
-  .logo {
-    width: 240px;
-    height: 60px; }
-
-  /******************************/
-  .headphone-container {
-    display: none; }
-
-  .background-section-5 {
-    background: url(../img/backgrounds/bg-5.jpg) no-repeat center transparent;
-    background-size: cover; } }
-@media screen and (max-width: 1000px) {
-  .galery-slider {
-    width: 500px; } }
-@media screen and (max-width: 700px) {
-  nav {
-    display: none; }
-
-  .section-text {
-    width: 100%;
-    position: relative;
-    top: 0;
-    padding: 10px;
-    box-sizing: border-box; }
-
-  .ui-help__mouse {
-    display: none; }
-
-  .share {
-    display: none; }
-
-  .socials {
-    display: none; }
-
-  .galery-slider {
-    width: 70%; }
-
-  a.button {
-    right: 10px;
-    bottom: 10px;
-    padding: 8px 10px; }
-
-  h1.section-text__title {
-    font-size: 50px;
-    margin: 10px 0; }
-
-  .logo {
-    width: 100px;
-    height: 30px;
-    top: 10px;
-    left: 10px; }
-
-  a.phone-number {
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    line-height: 30px; }
-
-  /****************/
-  nav ul li:hover a {
-    font-size: 0px; }
-
-  /****************/
-  .order-contacts-block {
-    width: 100%;
-    position: relative;
-    height: auto;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin: auto; }
-
-  .order-contacts-block .order-block {
-    float: none;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box; }
-
-  .order-contacts-block .contacts-block {
-    float: none;
-    width: 100%; }
-
-  .order-contacts-block .contacts-block .contacts-container {
-    position: relative; }
-
-  /*******************/
-  .order-contacts-block .order-block h1 {
-    font-size: 24px; }
-
-  .order-contacts-block .order-block h4 {
-    font-size: 20px; } }
-@media screen and (max-width: 400px) {
-  h1.section-text__title {
-    font-size: 32px; }
-
-  .order-contacts-block .order-block h1 {
-    font-size: 18px; }
-
-  .order-contacts-block .order-block h4 {
-    font-size: 14px; }
-
-  .order-contacts-block .order-block {
-    padding: 10px; }
-
-  /***/
-  form {
-    text-align: center; }
-
-  form p {
-    margin: 5px 0; }
-
-  input, textarea {
-    font-size: 14px; }
-
-  .order-contacts-block .contacts-block .contacts-container p {
-    font-size: 14px;
-    padding: 4px 10px;
-    margin: 4px 0; }
-
-  input[type="submit"] {
-    padding: 8px 10px;
-    font-size: 14px; }
-
-  textarea {
-    display: none; }
-
-  input[type="submit"] {
-    float: none; }
-
-  a.phone-number:before {
-    display: none; }
-
-  /****************/
-  .background-section-1 {
-    background-size: cover;
-    background-position: -360px 0; }
-
-  .background-section-3 {
-    background-size: cover;
-    background-position: -120px 0; } }
