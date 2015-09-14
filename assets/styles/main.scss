@@ -1,5 +1,7 @@
 @import "variables";
 
+@import "animation";
+
 @import "normalize";
 @import "animate";
 
@@ -12,7 +14,7 @@ html,body {
 	width: 100%; height: 100%; position: relative;
 }
 
-div,li {outline: 1px dotted red;}
+//div,li {outline: 1px dotted red;}
 
 ol, ul {
 	list-style: none;
@@ -26,21 +28,46 @@ clear: both;
 visibility: hidden;
 }
 
+.fp-controlArrow {display: none;}
+
 /****************************************************/
 
-.section-bg-1 {background: url(../img/slides/section-bg-1.jpg) center transparent;background-size: cover;}
+.section-bg-1 {}
 .section-bg-2 {background: url(../img/slides/section-bg-2.jpg) center transparent;background-size: cover;}
 .section-bg-3-1 {background: url(../img/slides/section-bg-3-1.jpg) center transparent;background-size: cover;}
 .section-bg-3-2 {background: url(../img/slides/section-bg-3-2.jpg) center transparent;background-size: 100% 100%;}
-.section-bg-3-2:before {
-	content: "";
+.rocks {
 	display: block;
 	width: 350px; height: 111px;
 	background: url(../img/slides/slide-rock-3-2.png) center transparent no-repeat;background-size: 100% 100%;
 	position: absolute; left: 50%;
-	margin-top: -111px; margin-left: -175px;
+	top: -111px; margin-left: -175px;
+	z-index: 9999;
+	.more-button {
+		width: 134px;
+		height: 134px;
+		position: absolute;
+		top: 0; left: 50%; margin-left: -59px;
+		cursor: pointer;
+		@include transitionAll0-3s;
+		background: url(../img/ui/more-button.png) center transparent no-repeat;background-size: 100% 100%;
+	}
+	.more-button:hover {
+		animation: scale-button 2s ease-in-out infinite;
+	}
+}
+.section-bg-2 .rocks {
+	background: url(../img/slides/slide-rock-2.png) center transparent no-repeat;background-size: 100% 100%;
+}
+.section-bg-3-1 .rocks {
+	background: url(../img/slides/slide-rock-3-2.png) center transparent no-repeat;background-size: 100% 100%;
 }
 .section-bg-4 {background: url(../img/slides/section-bg-4.jpg) center transparent;background-size: cover;}
+
+.slide-bg-1 {background: url(../img/slides/slide-bg-1.jpg) center transparent;background-size: cover;}
+.slide-bg-2 {background: url(../img/slides/slide-bg-2.jpg) center transparent;background-size: cover;}
+.slide-bg-3 {background: url(../img/slides/slide-bg-3.jpg) center transparent;background-size: cover;}
+.slide-bg-4 {background: url(../img/slides/slide-bg-4.jpg) center transparent;background-size: cover;}
 
 /****************************************************/
 
@@ -71,6 +98,7 @@ nav {
 				color: #fff;
 				letter-spacing: 2px;
 				@include MyriadProRegular;
+				@include transitionAll0-6s;
 				span {position: relative; display: inline-block;}
 				span:after {
 					content:attr(data-content);
@@ -80,6 +108,24 @@ nav {
 					margin-top: -10px; margin-right: -16px;
 					font-size: 12px;
 				}
+				&:hover:after {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 4px;
+					background-color: #07b3be;
+					position: absolute;
+					@include transitionAll0-6s;
+				}
+			}
+			&.active a:after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 4px;
+				background-color: #07b3be;
+				position: absolute;
+				@include transitionAll0-6s;
 			}
 		}
 		&:after {
@@ -111,9 +157,963 @@ ul.documents-links {
 
 /*** /navigation ***/
 
-/****** first slide ******/
+/*** section-list ***/
+
+.section-list {
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	right: 36px;
+	.section-item {
+		width: 10px; height: 10px;
+		border: 2px solid #8b8c93;
+		border-radius: 50%;
+		margin: 10px 0;
+		cursor: pointer;
+	}
+	.section-item.active {
+		border: 2px solid #fff;
+		background-color: #fff;
+		position: relative;
+		&:before {
+			content:attr(data-content);
+			display: block;
+			position: absolute;
+			top: 0; left: 0;
+			margin-top: -3px; margin-left: -24px;
+			font-size: 14px;
+			color: #fff;
+			@include MyriadProRegular;
+		}
+	}
+}
+
+.section-bg-1 {
+	.section-list .section-item {
+		border: 2px solid #8b8c93;
+	}
+	.section-list .section-item.active {
+		border: 2px solid #fff;
+		&:before {
+			color: #fff;
+		}
+	}
+}
+.section-bg-2 {
+	.section-list .section-item {
+		border: 2px solid #485567;
+	}
+	.section-list .section-item.active {
+		border: 2px solid #485567;
+		background-color: #485567;
+		&:before {
+			color: #485567;
+		}
+	}
+}
+.section-bg-3-1 {
+	.section-list .section-item {
+		border: 2px solid #485567;
+	}
+	.section-list .section-item.active {
+		border: 2px solid #485567;
+		background-color: #485567;
+		&:before {
+			color: #485567;
+		}
+	}
+}
+.section-bg-4 {
+	.section-list .section-item {
+		border: 2px solid #8b8c93;
+	}
+	.section-list .section-item.active {
+		border: 2px solid #fff;
+		&:before {
+			color: #fff;
+		}
+	}
+}
+
+/*** /section-list ***/
+
+/*** block-slider ***/
+
+.first-slide-content {
+	width: 880px; padding: 50px 70px;
+	background-color: rgba(48,52,66,0.6);
+	display: inline-block; text-align: left; position: relative; z-index: 0;
+}
+h1.slide-content-h1 {
+	text-transform: uppercase;
+	position: relative;
+	color: #fff;
+	padding: 20px 120px;
+	font-size: 58px;
+	@include MyriadProBold;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -16px; right: 0;
+		width: 500px;
+		height: 3px;
+		background-color: #fff;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -16px; left: 0;
+		width: 500px;
+		height: 3px;
+		background-color: #fff;
+	}
+}
+
+h4.slide-content-h4 {
+	color: #fff;
+	padding: 20px 120px;
+	font-size: 20px;
+	@include MyriadProRegular;
+}
+
+/* кнопка - предыдущий слайд */
+.slide-button-left {
+	width: 100px; height: 100px;
+	display: block;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.slide-button-left:before {
+	z-index: -1;
+	content: '';
+	@include transitionAll0-3s;
+	position: absolute;
+	opacity: 0.5;
+	width: 100px; height: 100px;
+	background: transparent url(../img/ui/box.png) center no-repeat;
+}
+.slide-button-left:hover:before {
+	opacity: 1;
+}
+.slide-button-left:hover .slide-button-left-arrow {margin-left: 38px;}
+.slide-button-left-arrow {
+	width: 14px; height: 26px; margin-top: 37px; margin-left: 43px;
+	background: transparent url(../img/ui/arrow-left.png) center no-repeat;
+	@include transitionAll0-3s;
+}
+/* /кнопка - предыдущий слайд */
+
+/* кнопка - следующий слайд */
+.slide-button-right {
+	width: 100px; height: 100px;
+	display: block;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.slide-button-right:before {
+	z-index: -1;
+	content: '';
+	@include transitionAll0-3s;
+	position: absolute;
+	opacity: 0.5;
+	width: 100px; height: 100px;
+	background: transparent url(../img/ui/box.png) center no-repeat;
+}
+.slide-button-right:hover .slide-button-right-arrow {margin-left: 48px;}
+.slide-button-right:hover:before {
+	opacity: 1;
+}
+.slide-button-right-arrow {
+	width: 14px; height: 26px; margin-top: 37px; margin-left: 43px;
+	background: transparent url(../img/ui/arrow-right.png) center no-repeat;
+	@include transitionAll0-3s;
+}
+/* /кнопка - следующий слайд */
+
+/* кнопка - на первом слайде */
+.first-slide-content .slide-button-right {
+	position: absolute;
+	right: -120px; top: -64px;
+}
+/* кнопка - на первом слайде */
+.first-slide-content .slide-button-left {
+	position: absolute;
+	left: -120px; bottom: -64px;
+}
+
+/* кнопка - на втором слайде */
+.second-slide-content .slide-button-right {
+	position: absolute;
+	right: -120px; top: -64px;
+}
+/* кнопка - на втором слайде */
+.second-slide-content .slide-button-left {
+	position: absolute;
+	left: -120px; bottom: -64px;
+}
+
+/* кнопка - на третьем слайде */
+.third-slide-content .slide-button-right {
+	position: absolute;
+	right: -120px; top: -64px;
+}
+/* кнопка - на третьем слайде */
+.third-slide-content .slide-button-left {
+	position: absolute;
+	left: -120px; bottom: -64px;
+}
+
+/* кнопка - на третьем слайде */
+.fourth-slide-content .slide-button-right {
+	position: absolute;
+	right: -120px; top: -64px;
+}
+/* кнопка - на третьем слайде */
+.fourth-slide-content .slide-button-left {
+	position: absolute;
+	left: -120px; bottom: -64px;
+}
+
+
+.slide-button {
+	text-transform: uppercase;
+	background-color: #ffab89;
+	color: #745c56;
+	width: 280px; height: 54px; line-height: 54px; text-align: center;
+	display: inline-block;
+	font-size: 18px;
+	float: right;
+	cursor: pointer;
+	@include MyriadProBold;
+	position: relative;
+	@include transitionAll0-3s;
+	&:hover:before {top: 0px; left: 0px;}
+	&:hover:after {top: 0px; left: 0px;}
+	&:before {
+		content: "";
+		@include transitionAll0-3s;
+		display: block; position: absolute;
+		width: 274px; height: 48px;
+		border: 3px solid #fff; top: -10px; left: 10px; z-index: -1;
+	}
+	&:after {
+		content: "";
+		@include transitionAll0-3s;
+		display: block; position: absolute;
+		width: 274px; height: 48px;
+		border: 3px solid #fff; top: 10px; left: -10px; z-index: -1;
+	}
+}
+
+/*** /block-slider ***/
+
+/*** block-slider-2 ***/
+
+.second-slide-content {
+	width: 880px; padding: 50px 130px;
+	background-color: rgba(48,52,66,0.6);
+	display: inline-block; text-align: left; position: relative; z-index: 0;
+}
+
+h1.slide-content-h1-2 {
+	text-transform: uppercase;
+	position: relative;
+	color: #fff;
+	padding: 20px 20px;
+	font-size: 58px;
+	line-height: 40px;
+	@include MyriadProBold;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -16px; right: 0;
+		width: 400px;
+		height: 3px;
+		background-color: #fff;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -16px; left: 0;
+		width: 400px;
+		height: 3px;
+		background-color: #fff;
+	}
+	span {
+		font-size: 30px;
+		@include MyriadProRegular;
+		text-transform: none;
+		font-weight: normal;
+		line-height: 20px;
+	}
+}
+
+.second-slide-content {
+	form {
+		padding-top: 40px;
+		input::-webkit-input-placeholder {color: #fff;}
+		input:-moz-placeholder {color: #fff;}
+		input[type="text"],input[type="email"] {
+			width: 220px;
+			background-color: transparent;
+			border: none;
+			outline: 1px solid #fff;
+			padding: 18px 20px;
+			color: #fff;
+			margin-right: 30px;
+			@include MyriadProBold;
+			@include transitionAll0-6s;
+			&:hover {
+				outline: 2px solid #e0c354;
+			}
+		}
+		input[type="submit"] {
+			width: 100%;
+			height: 100%;
+			outline: none;
+			border: none;
+			background-color: transparent;
+			text-transform: uppercase;
+			@include MyriadProBold;
+			font-size: 18px;
+			color: #0e0e0e;
+		}
+		.second-slide-button {
+			display: inline-block;
+			text-transform: uppercase;
+			background-color: #e0c354;
+			color: #0e0e0e;
+			width: 280px; height: 54px; line-height: 54px; text-align: center;
+			display: inline-block;
+			font-size: 18px;
+			float: right;
+			cursor: pointer;
+			@include MyriadProBold;
+			position: relative;
+			@include transitionAll0-3s;
+			&:hover:before {top: 0px; left: 0px;}
+			&:hover:after {top: 0px; left: 0px;}
+			&:before {
+				content: "";
+				@include transitionAll0-3s;
+				display: block; position: absolute;
+				width: 274px; height: 48px;
+				border: 3px solid #fff; top: -10px; left: 10px; z-index: -1;
+			}
+			&:after {
+				content: "";
+				@include transitionAll0-3s;
+				display: block; position: absolute;
+				width: 274px; height: 48px;
+				border: 3px solid #fff; top: 10px; left: -10px; z-index: -1;
+			}
+		}
+		p {
+			@include MyriadProRegular;
+			font-size: 14px; color: rgba(255,255,255,0.3);
+		}
+	}
+}
+
+/*** /block-slider-2 ***/
+
+/*** block-slider-3 ***/
+
+.third-slide-content {
+	width: 700px; padding: 50px 70px;
+	background-color: rgba(0,0,0,0.3);
+	display: inline-block; text-align: left; position: relative; z-index: 0;
+}
+
+h1.slide-content-h1-3 {
+	text-transform: uppercase;
+	position: relative;
+	color: #fff;
+	padding: 20px 20px;
+	font-size: 58px;
+	line-height: 40px;
+	@include MyriadProBold;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -16px; right: 0;
+		width: 400px;
+		height: 3px;
+		background-color: #fff;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -16px; left: 0;
+		width: 400px;
+		height: 3px;
+		background-color: #fff;
+	}
+	span {
+		font-size: 30px; line-height: 20px;
+		@include MyriadProRegular;
+		text-transform: none;
+		font-weight: normal;
+	}
+}
+
+/*** /block-slider-3 ***/
+
+/*** block-slider-4 ***/
+
+.fourth-slide-content {
+	width: 800px; padding: 50px 160px;
+	background-color: rgba(0,0,0,0.3);
+	display: inline-block; text-align: left; position: relative; z-index: 0;
+}
+
+h1.slide-content-h1-4 {
+	text-transform: uppercase;
+	position: relative;
+	color: #fff;
+	padding: 20px 20px;
+	font-size: 58px;
+	line-height: 40px;
+	@include MyriadProBold;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -16px; right: 0;
+		width: 400px;
+		height: 3px;
+		background-color: #fff;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -16px; left: 0;
+		width: 400px;
+		height: 3px;
+		background-color: #fff;
+	}
+}
+
+.fourth-slide-content-left-block {
+	width: 50%; float: left;
+	img {width: 100%; height: auto;}
+}
+.fourth-slide-content-right-block {
+	width: 46%; float: right; padding-left: 4%;
+	p {
+		margin: 20px 0 30px;
+		color: #e1e1e0;
+		@include MyriadProRegular;
+		font-size: 20px;
+	}
+}
+
+.fourth-slide-button {
+	display: inline-block;
+	text-transform: uppercase;
+	background-color: #e0c354;
+	color: #0e0e0e;
+	width: 280px; height: 54px; line-height: 54px; text-align: center;
+	display: inline-block;
+	font-size: 18px;
+	float: left;
+	cursor: pointer;
+	@include MyriadProBold;
+	position: relative;
+	@include transitionAll0-3s;
+	&:hover:before {top: 0px; left: 0px;}
+	&:hover:after {top: 0px; left: 0px;}
+	&:before {
+		content: "";
+		@include transitionAll0-3s;
+		display: block; position: absolute;
+		width: 274px; height: 48px;
+		border: 3px solid #fff; top: -10px; left: 10px; z-index: -1;
+	}
+	&:after {
+		content: "";
+		@include transitionAll0-3s;
+		display: block; position: absolute;
+		width: 274px; height: 48px;
+		border: 3px solid #fff; top: 10px; left: -10px; z-index: -1;
+	}
+}
+
+/*** /block-slider-4 ***/
+
+/****** /first slide ******/
+
+/****** second slide ******/
+
+.benefits-content {
+	color: #515e6a;
+	text-align: center;
+}
+
+h1.benefits-title {
+	text-transform: uppercase;
+	font-size: 50px;
+	margin: 10px 0;
+}
+p.benefits-under-title {
+	font-size: 33px;
+	margin: 10px 0;
+}
+
+.benefits-container {
+	display: inline-block; margin: 0 auto; width: 842px; margin-top: 20px;
+}
+.benefit-block {
+	width: 200px; padding: 140px 40px 0 40px; height: 120px; float: left; text-align: center;
+	font-size: 15px;
+	@include MyriadProBold;
+	overflow: hidden;
+}
+.benefit-block:nth-child(1) {
+	border-right: 1px #9db2b9 solid; border-bottom: 1px #9db2b9 solid;
+	background: url(../img/icons/benefit-1.png) no-repeat center;
+	background-position: center 70px;
+}
+.benefit-block:nth-child(2) {
+	border-right: 1px #9db2b9 solid; border-bottom: 1px #9db2b9 solid;
+	background: url(../img/icons/benefit-2.png) no-repeat center;
+	background-position: center 70px;
+}
+.benefit-block:nth-child(3) {
+	border-right: none; border-bottom: 1px #9db2b9 solid;
+	background: url(../img/icons/benefit-3.png) no-repeat center;
+	background-position: center 60px;
+}
+.benefit-block:nth-child(4) {
+	border-right: 1px #9db2b9 solid; border-bottom: none;
+	background: url(../img/icons/benefit-4.png) no-repeat center;
+	background-position: center 60px;
+}
+.benefit-block:nth-child(5) {
+	border-right: 1px #9db2b9 solid; border-bottom: none;
+	background: url(../img/icons/benefit-5.png) no-repeat center;
+	background-position: center 60px;
+}
+.benefit-block:nth-child(6) {
+	border-right: none; border-bottom: none;
+	background: url(../img/icons/benefit-6.png) no-repeat center;
+	background-position: center 60px;
+}
+
+/****** /second slide ******/
+
+/****** /third slide ******/
+
+.trading-strategies {
+	color: #515e6a;
+	text-align: center;
+}
+
+h1.trading-strategies-title {
+	@include MyriadProBold;
+	font-size: 50px;
+	margin: 10px 0;
+}
+
+p.trading-strategies-under-title {
+	@include MyriadProRegular;
+	font-size: 33px;
+	margin: 10px 0;
+}
+
+.trading-strategies-table {
+	display: inline-block;
+	width: 1200px;
+	margin-top: 30px;
+	@include MyriadProBold;
+	text-transform: uppercase;
+	.column {
+		width: 300px; float: left;
+		.column-title {
+			font-size: 18px; height: 70px; line-height: 70px;
+		}
+		.column-title-big {
+			font-size: 24px; height: 70px; line-height: 70px;
+		}
+	}
+	.column-1 {color: #8e96aa;}
+	.column-2 {color: #fff}
+	.column-3 {color: #fff}
+	.column-4 {color: #fff}
+	.column-1 .cell-block {
+		margin-left: 50px;
+		padding: 30px 0 12px 0;
+		border-bottom: 1px solid #8e96aa;
+		color: #8e96aa;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.column-2 .cell-block {
+		margin-left: 50px; margin-right: 50px;
+		padding: 0;
+		border-bottom: 1px solid #9d9dbe;
+		color: #fff;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.column-3 .cell-block {
+		margin-left: 50px; margin-right: 50px;
+		padding: 0;
+		border-bottom: 1px solid #606d8d;
+		color: #fff;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.column-4 .cell-block {
+		margin-left: 50px; margin-right: 50px;
+		padding: 0;
+		border-bottom: 1px solid #fff;
+		color: #fff;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.cell-price {
+		height: 100px; font-size: 40px; color: #fff; line-height: 100px;
+		@include MyriadProRegular; 
+		span {
+			font-size: 34px;
+		}
+	}
+	
+	.cell-bg-chrest {
+		background: url(../img/icons/chrest.png) no-repeat;
+		background-position: center 34px;
+		height: 63px;
+	}
+	.cell-bg-check {
+		background: url(../img/icons/check.png) no-repeat;
+		background-position: center 34px;
+		height: 63px;
+	}
+	
+	.column-white {background-color: #fff;}
+	.column-purple {background-color: #a8a8c6;}
+	.column-blue {background-color: #687593;}
+	.column-orange {background-color: #ffab89;}
+}
+.cell-bg-orange {background-color: #ffab89;}
+
+/****** /third slide ******/
+
+/****** rorth slide ******/
+
+.about-strategy {
+	color: #4e5c6a;
+	width: 1300px;
+	display: inline-block;
+}
+h1.about-strategy-title {
+	@include MyriadProBold;
+	font-size: 50px;
+	margin: 10px 0;
+	text-transform: uppercase;
+}
+p.about-strategy-under-title {
+	@include MyriadProRegular;
+	font-size: 33px;
+	margin: 10px 0;
+}
+
+.about-strategy-wrap {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.about-strategy-left-block {
+	width: 50%; float: left;
+	img {
+		width: 80%;
+		height: auto;
+	}
+}
+.about-strategy-right-block {
+	width: 50%; float: left;
+	font-size: 20px;
+	text-align: left;
+	p {
+		margin-top: 0; margin-bottom: 20px;
+		@include MyriadProRegular;
+		span {
+			@include MyriadProBold;
+		}
+	}
+}
+
+ul.about-strategy-yaar-buttons {
+	padding: 0; margin: 0;
+	display: table;
+	position: relative;
+	li {
+		display: table-cell;
+		a {
+			background-color: #60a6a9;
+			padding: 10px 20px;
+			margin-right: 150px;
+			position: relative;
+			z-index: 1;
+			@include MyriadProRegular;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		&:last-child a {margin-right: 0;}
+	}
+	&:after {
+		content: "";
+		display: block;
+		width: 100%; height: 2px; 
+		background-color: #84929c;
+		position: absolute;
+		left: 0; bottom: 8px;
+		z-index: 0;
+	}
+}
+
+.about-strategy-button {
+	padding: 20px 40px;
+	background-color: #5c5c98;
+	text-transform: uppercase;
+	@include MyriadProBold;
+	display: inline-block;
+	margin-top: 100px;
+	font-size: 18px;
+	color: #fff;
+	cursor: pointer;
+}
+
+/****** /rorth slide ******/
+
+/****** fifth slide ******/
+
+.about-us {
+	width: 1200px;
+	color: #fff;
+	display: inline-block;
+}
+
+h1.about-us-title {
+	@include MyriadProBold;
+	font-size: 50px;
+	margin: 10px 0;
+	text-transform: uppercase;
+}
+p.about-us-under-title {
+	@include MyriadProRegular;
+	font-size: 33px;
+	margin: 10px 0;
+}
+.about-us-text {
+	margin-top: 60px;
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+	color: #f5f5f5;
+	font-size: 20px;
+	padding: 40px 60px;
+	text-align: left;
+	position: relative;
+	p {
+		@include MyriadProRegular;
+		span {
+			@include MyriadProBold;
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0; left: 0;
+		width: 30%;
+		height: 2px;
+		background-color: #fff;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0; right: 0;
+		width: 30%;
+		height: 2px;
+		background-color: #fff;
+	}
+}
+
+.about-us form {
+	margin-top: -42px;
+	font-size: 23px;
+	input[type="text"],input[type="email"] {
+		width: 220px;
+		background-color: transparent;
+		border: none;
+		outline: 1px solid #fff;
+		padding: 12px 20px;
+		color: #fff;
+		margin-right: 20px;
+		@include MyriadProRegular;
+		@include transitionAll0-6s;
+		&:hover {
+			outline: 2px solid #08b3bd;
+		}
+	}
+	input[type="submit"] {
+		width: 260px; height: 54px; line-height: 54px;
+		color: #fff;
+		background-color: #08b3bd;
+		@include MyriadProRegular;
+		border: none;
+	}
+}
+
+h1.about-us-form-title {
+	@include MyriadProBold;
+	font-size: 50px;
+	margin: 10px 0;
+	text-transform: uppercase;
+}
+p.about-us-under-form-title {
+	@include MyriadProRegular;
+	font-size: 33px;
+	margin: 10px 0;
+	padding-bottom: 20px;
+}
+
+/****** /fifth slide ******/
 
 /****************************************************/
 
+/* страница о рисках */
+
+.risks {
+	background: url(../img/slides/section-bg-3-1.jpg) center transparent;
+}
+
+.risks-content {
+	img[alt="logo"] {
+		display: inline-block;
+		margin: 20px 0;
+	}
+	width: 800px; display: inline-block; text-align: left; color: #5a5d6b;
+	p {
+		@include MyriadProRegular;
+		span {
+			@include MyriadProBold;
+		}
+	}
+}
+
+.rules {
+	background: url(../img/slides/section-bg-3-1.jpg) center transparent;
+}
+
+.rules-content {
+	img[alt="logo"] {
+		display: inline-block;
+		margin: 20px 0;
+	}
+	width: 800px; display: inline-block; text-align: left; color: #5a5d6b;
+	h3 {
+		@include MyriadProRegular;
+	}
+	p {
+		@include MyriadProRegular;
+		span {
+			@include MyriadProBold;
+		}
+	}
+	p.alert {color: red;}
+	ul {
+		list-style: square outside;
+		li {
+			@include MyriadProRegular;
+		}
+	}
+}
+
+/* /страница о рисках */
+
+
+/* modal windows */
+
+.modal {
+	padding: 40px 60px;
+	ul {
+		margin: 0; padding: 0;
+		li {
+			span {
+				text-transform: uppercase;
+				font-size: 18px;
+				@include MyriadProBold;
+				color: #6f737f;
+				padding: 20px 0;
+				display: inline-block;
+			}
+			input[type="text"],input[type="email"] {
+				width: 460px;
+				background-color: transparent;
+				padding: 20px 30px;
+				@include MyriadProRegular;
+				font-size: 18px;
+				outline: 1px solid #b9b9b9;
+				border: none;
+				margin: 10px 0;
+				@include transitionAll0-6s;
+				&:hover {
+					outline: 2px solid #5c5c98;
+				}
+			}
+			input[type="submit"] {
+				background-color: #5c5c98;
+				color: #fff;
+				@include MyriadProRegular;
+				font-size: 20px;
+				padding: 20px 30px;
+				border: none;
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+#modal-1 ul li input[type="submit"] {
+	background-color: #5c5c98;
+}
+#modal-1 ul li input[type="text"], #modal-1 ul li input[type="email"] {
+	outline: 1px solid #b9b9b9;
+	&:hover {outline: 2px solid #5c5c98;}
+}
+#modal-2 ul li input[type="submit"] {
+	background-color: #63a8ab;
+}
+#modal-2 ul li input[type="text"], #modal-2 ul li input[type="email"] {
+	outline: 1px solid #b9b9b9;
+	&:hover {outline: 2px solid #63a8ab;}
+}
+
+.fancybox-skin {
+	border-radius: 0!important;
+}
+
+#modal-sucsess {
+	width: 100%; height: 100%;
+	p {
+		@include MyriadProRegular;
+		font-size: 20px;
+	}
+}
+
+input.alert {outline: 2px solid #99001f!important; animation: scale-input 2s ease-in-out infinite;}
+
+/* /modal windows */
 
 @import "adaptive";
